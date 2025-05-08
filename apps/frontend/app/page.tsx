@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col place-items-center place-content-center">
+    <div className="w-screen h-screen flex flex-col place-items-center place-content-center bg-gray-950">
       <div className="p-20 bg-blue-950 rounded-4xl flex place-items-center">
         <label>
           <input
