@@ -17,7 +17,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: use release-please
+      - id: release-please
+        name: use release-please
         uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,4 +38,6 @@ jobs:
           docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:latest --label org.opencontainers.image.source=https://github.com/${{ github.repository }} ./apps/frontend
           docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:latest --label org.opencontainers.image.source=https://github.com/${{ github.repository }} ./apps/backend
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:latest
+          docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:${{ steps.release-please.outputs.major }}.${{ steps.release-please.outputs.minor }}.${{ steps.release-please.outputs.patch }}
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:latest
+          docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:${{ steps.release-please.outputs.major }}.${{ steps.release-please.outputs.minor }}.${{ steps.release-please.outputs.patch }}
