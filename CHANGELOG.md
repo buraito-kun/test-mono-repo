@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/buraito-kun/test-mono-repo/compare/v3.0.0...v3.0.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* change background color ([3e34505](https://github.com/buraito-kun/test-mono-repo/commit/3e3450556f3dfd62303997082498c1a075247b2e))
+
 ## [3.0.0](https://github.com/buraito-kun/test-mono-repo/compare/v2.0.0...v3.0.0) (2025-05-08)
 
 
