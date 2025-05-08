@@ -32,7 +32,7 @@ jobs:
 
       - name: Build and push image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:latest ./apps/frontend
-          docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:latest ./apps/backend
+          docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:latest --label org.opencontainers.image.source=https://github.com/${{ github.repository }} ./apps/frontend
+          docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:latest --label org.opencontainers.image.source=https://github.com/${{ github.repository }} ./apps/backend
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:latest
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:latest
