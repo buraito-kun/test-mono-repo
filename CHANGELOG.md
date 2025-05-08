@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/buraito-kun/test-mono-repo/compare/v3.0.1...v3.0.2) (2025-05-08)
+
+
+### Bug Fixes
+
+* forgot to tag build version ([4e74aa1](https://github.com/buraito-kun/test-mono-repo/commit/4e74aa18edfae4eaf1019494552d593d3a42d898))
+
 ## [3.0.1](https://github.com/buraito-kun/test-mono-repo/compare/v3.0.0...v3.0.1) (2025-05-08)
 
 
