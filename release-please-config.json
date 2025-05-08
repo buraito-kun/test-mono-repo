@@ -1,0 +1,10 @@
+{
+  "packages": {
+    "apps/backend": {
+      "release-type": "node"
+    },
+    "apps/frontend": {
+      "release-type": "node"
+    }
+  }
+}
