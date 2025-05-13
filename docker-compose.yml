@@ -4,8 +4,6 @@ services:
     image: ghcr.io/buraito-kun/test-mono-repo/backend
     pull_policy: if_not_present
     restart: always
-    environment:
-      BACKEND_PORT: ${BACKEND_PORT}
     ports:
       - "${BACKEND_PORT}:3001"
   frontend:
