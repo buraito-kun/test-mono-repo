@@ -11,8 +11,49 @@ permissions:
   pull-requests: write
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: |
+          npm install -g wait-on
+        # backend
+      - name: Install backend dependencies
+        working-directory: apps/backend
+        run: |
+          npm install
+      - name: Run backend tests
+        working-directory: apps/backend
+        run: |
+          npm test
+      - name: Run backend service
+        working-directory: apps/backend
+        run: |
+          npm run build
+          npm run start &
+        # frontend
+      - name: Install frontend dependencies
+        working-directory: apps/frontend
+        run: |
+          npm install
+      - name: Wait for backend start complete
+        run: |
+          wait-on http://localhost:3001
+      - name: Run frontend tests
+        working-directory: apps/frontend
+        run: |
+          npm test
+
   release:
     runs-on: ubuntu-latest
+    needs:
+      - test
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
