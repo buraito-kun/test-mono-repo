@@ -45,6 +45,9 @@ jobs:
       - name: Wait for backend start complete
         run: |
           wait-on http://localhost:3001
+      - name: Set up frontend environment
+        run: |
+          export NEXT_PUBLIC_API_URL=http://localhost:3001/
       - name: Run frontend tests
         working-directory: apps/frontend
         run: |
