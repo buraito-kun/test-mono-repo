@@ -81,7 +81,7 @@ jobs:
         run: |
           VERSION=${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
 
-          docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:latest -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:$VERSION --label org.opencontainers.image.source=https://github.com/${{ github.repository }} ./apps/frontend
+          docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:latest -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:$VERSION --label org.opencontainers.image.source=https://github.com/${{ github.repository }} --build-arg NEXT_PUBLIC_API_URL=${{ env.NEXT_PUBLIC_API_URL }} ./apps/frontend
           docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:latest -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:$VERSION --label org.opencontainers.image.source=https://github.com/${{ github.repository }} ./apps/backend
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:latest
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/frontend:$VERSION
