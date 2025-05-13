@@ -13,7 +13,5 @@ services:
     image: ghcr.io/buraito-kun/test-mono-repo/frontend
     pull_policy: if_not_present
     restart: always
-    environment:
-      FRONTEND_PORT: ${FRONTEND_PORT}
     ports:
       - "${FRONTEND_PORT}:3000"
