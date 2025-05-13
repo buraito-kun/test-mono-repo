@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.0.2...v3.1.0) (2025-05-13)
+
+
+### Features
+
+* add something ([954cd19](https://github.com/buraito-kun/test-mono-repo/commit/954cd19ad8c53cbecac03a197f0dfb874d9147ea))
+
 ## [3.0.2](https://github.com/buraito-kun/test-mono-repo/compare/v3.0.1...v3.0.2) (2025-05-08)
 
 
