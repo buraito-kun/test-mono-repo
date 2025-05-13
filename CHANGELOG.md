@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/buraito-kun/test-mono-repo/compare/v3.1.0...v3.1.1) (2025-05-13)
+
+
+### Bug Fixes
+
+* **ci:** specify build-arg for docker build ([2b705a1](https://github.com/buraito-kun/test-mono-repo/commit/2b705a159ea63c69a716802430a4a2c2b66f5772))
+
 ## [3.1.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.0.2...v3.1.0) (2025-05-13)
 
 
