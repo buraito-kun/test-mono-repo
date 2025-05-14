@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.2](https://github.com/buraito-kun/test-mono-repo/compare/v3.1.1...v3.1.2) (2025-05-14)
+
+
+### Bug Fixes
+
+* **ci:** change env variable ([fc8ffe3](https://github.com/buraito-kun/test-mono-repo/commit/fc8ffe385d9db51ad7882041c9dbab7782f69653))
+
 ## [3.1.1](https://github.com/buraito-kun/test-mono-repo/compare/v3.1.0...v3.1.1) (2025-05-13)
 
 
