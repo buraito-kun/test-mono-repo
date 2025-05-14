@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.2.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.1.2...v3.2.0) (2025-05-14)
+
+
+### Features
+
+* add terraform ([af594db](https://github.com/buraito-kun/test-mono-repo/commit/af594dbbfc78ab261fed5dede067775c25d990d1))
+* **ci:** make test reusable and add dev CI ([7618d7e](https://github.com/buraito-kun/test-mono-repo/commit/7618d7e1ecf70183b237659d93d60ca874b3f564))
+
+
+### Bug Fixes
+
+* **ci:** use secrets instead of variable ([9e87e17](https://github.com/buraito-kun/test-mono-repo/commit/9e87e17da208991f39290349db45d37c75466866))
+
 ## [3.1.2](https://github.com/buraito-kun/test-mono-repo/compare/v3.1.1...v3.1.2) (2025-05-14)
 
 
