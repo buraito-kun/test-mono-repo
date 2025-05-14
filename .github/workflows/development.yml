@@ -1,0 +1,16 @@
+name: Development CI test
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  test-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print NEXT_PUBLIC_API_URL
+        run: echo $NEXT_PUBLIC_API_URL
+
+  test:
+    uses: ./.github/workflows/test application.yml
