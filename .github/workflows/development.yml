@@ -8,3 +8,17 @@ on:
 jobs:
   test:
     uses: ./.github/workflows/test application.yml
+
+  notification:
+    runs-on: ubuntu-latest
+    needs:
+      - test
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Send notification to Google Chat
+        uses: google-github-actions/send-google-chat-webhook@v0.0.4
+        with:
+          webhook_url: ${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}
+          mention: "<users/off.brightthanadej@gmail.com>"
