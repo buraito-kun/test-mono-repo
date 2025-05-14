@@ -18,7 +18,7 @@ jobs:
       id-token: write
     steps:
       - name: Send notification to Google Chat
-        uses: buraito-kun/send-google-chat-webhook@v0.0.4
+        uses: buraito-kun/send-google-chat-webhook@v0.0.5
         with:
           webhook_url: ${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}
           mention: "<users/off.brightthanadej@gmail.com>"
