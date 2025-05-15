@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.4.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.3.0...v3.4.0) (2025-05-15)
+
+
+### Features
+
+* add pow operator ([98b3eb1](https://github.com/buraito-kun/test-mono-repo/commit/98b3eb13b86b286e45100369f053ebae509fda51))
+
+
+### Bug Fixes
+
+* **ci:** send notification if new version release ([886ccbd](https://github.com/buraito-kun/test-mono-repo/commit/886ccbdb96cbb89827d639cefeb60628c185c5fc))
+* **test:** fix test describe keyword ([6e0b2ef](https://github.com/buraito-kun/test-mono-repo/commit/6e0b2efef576172548aac8949dd9f8527508303d))
+
 ## [3.3.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.2.0...v3.3.0) (2025-05-15)
 
 
