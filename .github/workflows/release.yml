@@ -5,16 +5,15 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-  issues: write
-  pull-requests: write
-
 jobs:
   test:
     uses: ./.github/workflows/test application.yml
 
   release:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     needs:
       - test
@@ -51,11 +50,12 @@ jobs:
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/backend:$VERSION
 
   notification:
+    permissions:
+      contents: read
+      id-token: write
     runs-on: ubuntu-latest
     needs:
       - release
-    permissions:
-      id-token: write
     steps:
       - name: Send notification to Google Chat
         uses: buraito-kun/send-google-chat-webhook@v0.0.6
