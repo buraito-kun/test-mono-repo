@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.3.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.2.0...v3.3.0) (2025-05-15)
+
+
+### Features
+
+* **ci:** add notification ([f405ecf](https://github.com/buraito-kun/test-mono-repo/commit/f405ecf798bad780107903c21d5e935e8de7493c))
+
+
+### Bug Fixes
+
+* **ci:** invalid npm command for test:cov ([5b1b48f](https://github.com/buraito-kun/test-mono-repo/commit/5b1b48f9313d12871df23b9fa7fab064cd91f9a7))
+* **ci:** use own send notification ([ecd1b76](https://github.com/buraito-kun/test-mono-repo/commit/ecd1b76f4531a129669bf3d633653ea2457ec641))
+
 ## [3.2.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.1.2...v3.2.0) (2025-05-14)
 
 
