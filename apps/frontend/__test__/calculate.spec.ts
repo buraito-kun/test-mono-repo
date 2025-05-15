@@ -56,17 +56,17 @@ describe("test lib/calculate.ts", () => {
     expect(await fetchCalculation(99, -11, "/")).toBe(-9);
   });
 
-  it("exponent 2 / 3 should equal 8", async () => {
+  it("exponent 2 ^ 3 should equal 8", async () => {
     (axios.post as jest.Mock).mockImplementation(() =>
       Promise.resolve({ status: 201, data: 8 })
     );
-    expect(await fetchCalculation(2, 3, "/")).toBe(8);
+    expect(await fetchCalculation(2, 3, "^")).toBe(8);
   });
-  it("exponent 2 / -2 should equal 0.25", async () => {
+  it("exponent 2 ^ -2 should equal 0.25", async () => {
     (axios.post as jest.Mock).mockImplementation(() =>
       Promise.resolve({ status: 201, data: 0.25 })
     );
-    expect(await fetchCalculation(2, -2, "/")).toBe(0.25);
+    expect(await fetchCalculation(2, -2, "^")).toBe(0.25);
   });
 
   it("other op 2 ** 3 should equal NaN", async () => {
