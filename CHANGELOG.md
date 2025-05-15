@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.2](https://github.com/buraito-kun/test-mono-repo/compare/v3.5.1...v3.5.2) (2025-05-15)
+
+
+### Bug Fixes
+
+* **ci:** forgot to checkout repo ([584e467](https://github.com/buraito-kun/test-mono-repo/commit/584e467d45fcedddfd174688caff340e6e9d99ca))
+
 ## [3.5.1](https://github.com/buraito-kun/test-mono-repo/compare/v3.5.0...v3.5.1) (2025-05-15)
 
 
