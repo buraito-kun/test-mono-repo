@@ -1,6 +1,7 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty } from '@nestjs/swagger';
 
 export enum Operator {
+  UNKNOWN = '',
   PLUS = '+',
   MINUS = '-',
   MULTIPLY = '*',
