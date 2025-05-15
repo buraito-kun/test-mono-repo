@@ -54,7 +54,7 @@ jobs:
           NEXT_PUBLIC_API_URL: http://localhost:3001/
         run: |
           npm run test:cov
-      
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
