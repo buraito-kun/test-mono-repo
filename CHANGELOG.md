@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.5.3](https://github.com/buraito-kun/test-mono-repo/compare/v3.5.2...v3.5.3) (2025-05-15)
+
+
+### Bug Fixes
+
+* **ci:** command not found in alpine ([f944f7c](https://github.com/buraito-kun/test-mono-repo/commit/f944f7ca60fe8461a4b4400bfd71eaa32ccfab0c))
+* **ci:** invalid checksum ([f09c958](https://github.com/buraito-kun/test-mono-repo/commit/f09c95895088147b18ddf618973299fdc994abcf))
+* **docker:** change image version and digest ([5b3731f](https://github.com/buraito-kun/test-mono-repo/commit/5b3731febb3e59bdd7d3ebcb5d0240845945a21b))
+
 ## [3.5.2](https://github.com/buraito-kun/test-mono-repo/compare/v3.5.1...v3.5.2) (2025-05-15)
 
 
