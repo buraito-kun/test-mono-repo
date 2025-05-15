@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.5.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.4.0...v3.5.0) (2025-05-15)
+
+
+### Features
+
+* add local calculation fallback and improve calculator UI elements ([d951976](https://github.com/buraito-kun/test-mono-repo/commit/d95197647c8ead5b8721942a5e95a9acaa5e357a))
+* enhance calculator UI with error handling, loading states and keyboard shortcuts ([351ade7](https://github.com/buraito-kun/test-mono-repo/commit/351ade7a072fba2142b8f18972f8eb3aadd924f3))
+
 ## [3.4.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.3.0...v3.4.0) (2025-05-15)
 
 
