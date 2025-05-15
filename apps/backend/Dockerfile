@@ -1,4 +1,4 @@
-FROM node:24@sha256:d9138b93aec8cd4b4febaae0b4e40b3272015ca6 AS build
+FROM node:24@sha256:222f704ce7f499c7bd7d101c993b980d86393e87bb54d416bcfcfe8e62aa9f64 AS build
 
 WORKDIR /usr/app
 
@@ -12,7 +12,7 @@ RUN npm run build
 
 # -----------------------
 
-FROM node:24-alpine3.20@sha256:d9138b93aec8cd4b4febaae0b4e40b3272015ca6
+FROM node:24-alpine3.20@sha256:3b48d62b0e3a6c31784bafefc95baedf56987c6ee8ba891c924a529e5301fe1c
 
 WORKDIR /usr/app
 
