@@ -28,24 +28,24 @@ describe('AppController', () => {
       expect(appController.calculation(-5, 15, '+')).toBe(10);
     });
 
-    it('add 5 - 15 to equal -10', () => {
+    it('minus 5 - 15 to equal -10', () => {
       expect(appController.calculation(5, 15, '-')).toBe(-10);
     });
-    it('add 21 - 7 to equal 14', () => {
+    it('minus 21 - 7 to equal 14', () => {
       expect(appController.calculation(21, 7, '-')).toBe(14);
     });
 
-    it('add 2 * 3 to equal 6', () => {
+    it('multiply 2 * 3 to equal 6', () => {
       expect(appController.calculation(2, 3, '*')).toBe(6);
     });
-    it('add -2 * 15 to equal -30', () => {
+    it('multiply -2 * 15 to equal -30', () => {
       expect(appController.calculation(-2, 15, '*')).toBe(-30);
     });
 
-    it('add 21 / 7 to equal 3', () => {
+    it('divide 21 / 7 to equal 3', () => {
       expect(appController.calculation(21, 7, '/')).toBe(3);
     });
-    it('add 99 / -11 to equal -9', () => {
+    it('divide 99 / -11 to equal -9', () => {
       expect(appController.calculation(99, -11, '/')).toBe(-9);
     });
 
