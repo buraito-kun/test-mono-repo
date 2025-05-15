@@ -33,6 +33,7 @@ jobs:
           manifest-file: .release-please-manifest.json
 
       - name: Login to Docker
+        if: ${{ steps.release.outputs.release_created }}
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
