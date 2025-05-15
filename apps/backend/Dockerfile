@@ -20,7 +20,7 @@ COPY package.json .
 
 RUN npm install --omit=dev
 
-RUN groupadd -r nonroot && useradd -r -g nonroot nonroot
+RUN addgroup -S nonroot && adduser -S -G nonroot nonroot
 
 USER nonroot
 
