@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.1](https://github.com/buraito-kun/test-mono-repo/compare/v3.5.0...v3.5.1) (2025-05-15)
+
+
+### Bug Fixes
+
+* **ci:** refactor ([03a4ef2](https://github.com/buraito-kun/test-mono-repo/commit/03a4ef2270e075309041c94916eba1029494f6a5))
+
 ## [3.5.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.4.0...v3.5.0) (2025-05-15)
 
 
