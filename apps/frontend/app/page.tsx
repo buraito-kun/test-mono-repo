@@ -3,6 +3,11 @@
 import fetchCalculation from "@/lib/calculate";
 import { useState } from "react";
 
+/**
+ * Renders a calculator UI that allows users to input two numbers, select an arithmetic operator, and view the calculated result.
+ *
+ * The calculator supports addition, subtraction, multiplication, division, and exponentiation. Calculation is performed asynchronously when the user clicks the submit button, and the result is displayed next to the equals sign.
+ */
 export default function Home() {
   const [a, setA] = useState(0);
   const [b, setB] = useState(0);
