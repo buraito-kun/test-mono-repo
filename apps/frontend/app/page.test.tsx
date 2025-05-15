@@ -189,4 +189,51 @@ describe("Home page", () => {
       expect(screen.getByText("-9")).toBeInTheDocument();
     });
   });
+
+  it("exponent 2 ^ 3 should equal 8", async () => {
+    render(<Page />);
+    fireEvent.change(screen.getByPlaceholderText("a"), {
+      target: {
+        value: 2,
+      },
+    });
+    fireEvent.change(screen.getByPlaceholderText("b"), {
+      target: {
+        value: 3,
+      },
+    });
+    fireEvent.change(screen.getByDisplayValue("+"), {
+      target: {
+        value: "^",
+      },
+    });
+    fireEvent.click(screen.getByText("Submit!"));
+
+    await waitFor(() => {
+      expect(screen.getByText("8")).toBeInTheDocument();
+    });
+  });
+  it("exponent 2 ^ -2 should equal 0.25", async () => {
+    render(<Page />);
+    fireEvent.change(screen.getByPlaceholderText("a"), {
+      target: {
+        value: 2,
+      },
+    });
+    fireEvent.change(screen.getByPlaceholderText("b"), {
+      target: {
+        value: -2,
+      },
+    });
+    fireEvent.change(screen.getByDisplayValue("+"), {
+      target: {
+        value: "^",
+      },
+    });
+    fireEvent.click(screen.getByText("Submit!"));
+
+    await waitFor(() => {
+      expect(screen.getByText("0.25")).toBeInTheDocument();
+    });
+  });
 });

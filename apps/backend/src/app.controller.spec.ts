@@ -48,5 +48,19 @@ describe('AppController', () => {
     it('add 99 / -11 to equal -9', () => {
       expect(appController.calculation(99, -11, '/')).toBe(-9);
     });
+
+    it('exponent 2 ^ 3 to equal 8', () => {
+      expect(appController.calculation(2, 3, '^')).toBe(8);
+    });
+    it('exponent 2 ^ -2 to equal 0.25', () => {
+      expect(appController.calculation(2, -2, '^')).toBe(0.25);
+    });
+
+    it('other op 2 ** 3 to equal NaN', () => {
+      expect(appController.calculation(2, 3, '**')).toBe(NaN);
+    });
+    it('other op 10 % 2 to equal NaN', () => {
+      expect(appController.calculation(10, 2, '%')).toBe(NaN);
+    });
   });
 });
