@@ -30,7 +30,7 @@ jobs:
       - name: Run backend tests
         working-directory: apps/backend
         run: |
-          npm test
+          npm test:cov
 
       - name: Run backend service
         working-directory: apps/backend
@@ -53,4 +53,9 @@ jobs:
         env:
           NEXT_PUBLIC_API_URL: http://localhost:3001/
         run: |
-          npm test
+          npm test:cov
+      
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          files: ./apps/backend/coverage/lcov.info,./apps/frontend/coverage/lcov.info
