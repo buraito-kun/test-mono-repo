@@ -86,7 +86,7 @@ export default function Home() {
                 value={a}
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 onChange={(e) => handleInputChange(setA, e.target.value)}
-                placeholder="Enter a number"
+                placeholder="a"
               />
             </div>
             
@@ -114,7 +114,7 @@ export default function Home() {
                 value={b}
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 onChange={(e) => handleInputChange(setB, e.target.value)}
-                placeholder="Enter a number"
+                placeholder="b"
               />
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function Home() {
             onClick={onClickCalculate}
             disabled={isCalculating}
           >
-            {isCalculating ? "Calculating..." : "Calculate"}
+            {isCalculating ? "Calculating..." : "Submit!"}
           </button>
         </div>
         

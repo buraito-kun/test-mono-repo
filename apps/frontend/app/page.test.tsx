@@ -14,7 +14,7 @@ describe("Home page", () => {
         value: 20,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "+",
       },
@@ -37,7 +37,7 @@ describe("Home page", () => {
         value: 20,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "+",
       },
@@ -61,7 +61,7 @@ describe("Home page", () => {
         value: 15,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "-",
       },
@@ -84,7 +84,7 @@ describe("Home page", () => {
         value: 7,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "-",
       },
@@ -108,7 +108,7 @@ describe("Home page", () => {
         value: 3,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "*",
       },
@@ -131,7 +131,7 @@ describe("Home page", () => {
         value: 15,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "*",
       },
@@ -155,7 +155,7 @@ describe("Home page", () => {
         value: 7,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "/",
       },
@@ -178,7 +178,7 @@ describe("Home page", () => {
         value: -11,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "/",
       },
@@ -202,7 +202,7 @@ describe("Home page", () => {
         value: 3,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "^",
       },
@@ -225,7 +225,7 @@ describe("Home page", () => {
         value: -2,
       },
     });
-    fireEvent.change(screen.getByDisplayValue("+"), {
+    fireEvent.change(screen.getByRole("combobox"), {
       target: {
         value: "^",
       },
