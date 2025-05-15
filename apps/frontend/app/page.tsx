@@ -34,6 +34,7 @@ export default function Home() {
             <option value={"-"}>-</option>
             <option value={"*"}>*</option>
             <option value={"/"}>/</option>
+            <option value={"^"}>^</option>
           </select>
           <input
             id="b"

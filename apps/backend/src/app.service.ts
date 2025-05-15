@@ -16,6 +16,8 @@ export class AppService {
         return a * b;
       case '/':
         return Number((a / b).toFixed(2));
+      case '^':
+        return Math.pow(a, b);
       default:
         return NaN;
     }
