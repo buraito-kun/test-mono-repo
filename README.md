@@ -1,3 +1,6 @@
+[![Release Semantic Version](https://github.com/buraito-kun/test-mono-repo/actions/workflows/release.yml/badge.svg)](https://github.com/buraito-kun/test-mono-repo/actions/workflows/release.yml)
+[![codecov](https://codecov.io/gh/buraito-kun/test-mono-repo/graph/badge.svg?token=K7H8WO298F)](https://codecov.io/gh/buraito-kun/test-mono-repo)
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
