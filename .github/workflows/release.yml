@@ -35,7 +35,7 @@ jobs:
           docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/${{ matrix.service }}:latest \
           --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
           $BUILD_ARGS \
-          ./apps/${{ matrix.service }}
+          -f ./apps/${{ matrix.service }}/Dockerfile .
 
       - name: Run Trivy scan for ${{ matrix.service }}
         uses: aquasecurity/trivy-action@0.30.0
@@ -109,8 +109,8 @@ jobs:
           -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/${{ matrix.service }}:${{ env.VERSION }} \
           --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
           $BUILD_ARGS \
-          ./apps/${{ matrix.service }}
-          
+          -f ./apps/${{ matrix.service }}/Dockerfile .
+
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/${{ matrix.service }}:latest
           docker push ghcr.io/${{ github.repository_owner }}/test-mono-repo/${{ matrix.service }}:${{ env.VERSION }}
 
