@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.5.3...v3.6.0) (2025-05-16)
+
+
+### Features
+
+* **backend:** add auth for doc route ([2ae49b6](https://github.com/buraito-kun/test-mono-repo/commit/2ae49b6c959e9569641f4c7e13ae526a743afca9))
+
 ## [3.5.3](https://github.com/buraito-kun/test-mono-repo/compare/v3.5.2...v3.5.3) (2025-05-15)
 
 
