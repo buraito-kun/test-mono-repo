@@ -12,13 +12,13 @@ const sdk = new NodeSDK({
   }),
   traceExporter: new OTLPTraceExporter({
     url:
-      process.env.OTEL_EXPORTER_OTLP_ENDPOINT ||
+      process.env.OTEL_EXPORTER_OTLP_ENDPOINT + "/v1/traces" ||
       "http://localhost:4318/v1/traces",
   }),
   metricReader: new PeriodicExportingMetricReader({
     exporter: new OTLPMetricExporter({
       url:
-        process.env.OTEL_EXPORTER_OTLP_ENDPOINT ||
+        process.env.OTEL_EXPORTER_OTLP_ENDPOINT + "/v1/metrics" ||
         "http://localhost:4318/v1/metrics",
     }),
   }),
