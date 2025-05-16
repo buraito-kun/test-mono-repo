@@ -12,37 +12,41 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: |
-          npm install -g wait-on
+          pnpm install -g wait-on
 
         # backend
       - name: Install backend dependencies
         working-directory: apps/backend
         run: |
-          npm install
+          pnpm install
 
       - name: Run backend tests
         working-directory: apps/backend
         run: |
-          npm run test:cov
+          pnpm run test:cov
 
       - name: Run backend service
         working-directory: apps/backend
         run: |
-          npm run build
-          npm run start &
+          pnpm run build
+          pnpm run start &
 
         # frontend
       - name: Install frontend dependencies
         working-directory: apps/frontend
         run: |
-          npm install
+          pnpm install
 
       - name: Wait for backend start complete
         run: |
@@ -53,7 +57,7 @@ jobs:
         env:
           NEXT_PUBLIC_API_URL: http://localhost:3001/
         run: |
-          npm run test:cov
+          pnpm run test:cov
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5

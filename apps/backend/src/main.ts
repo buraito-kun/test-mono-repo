@@ -2,6 +2,10 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AuthMiddleware } from './auth/auth.middleware';
+import { config } from 'dotenv';
+config();
+
+import '@repo/lgtm/instrumentation';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
