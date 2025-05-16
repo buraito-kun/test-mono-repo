@@ -1,34 +1,45 @@
-FROM node:24@sha256:222f704ce7f499c7bd7d101c993b980d86393e87bb54d416bcfcfe8e62aa9f64 AS build
+FROM node:24-alpine3.20@sha256:3b48d62b0e3a6c31784bafefc95baedf56987c6ee8ba891c924a529e5301fe1c AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN npm install -g pnpm
+
+# -----------------------
+
+FROM base AS build
 
 WORKDIR /usr/app
 
-COPY package.json .
+COPY ../../ ./
 
-RUN npm install
+WORKDIR /usr/app/apps/frontend
 
-COPY . .
+RUN pnpm install
 
 ARG NEXT_PUBLIC_API_URL
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 
-RUN npm run build
+RUN pnpm run build
 
 # -----------------------
 
-FROM node:24-alpine3.20@sha256:3b48d62b0e3a6c31784bafefc95baedf56987c6ee8ba891c924a529e5301fe1c
+FROM base AS prod
 
 WORKDIR /usr/app
 
-COPY package.json .
+COPY --chown=nonroot:nonroot . .
 
-RUN npm install --omit=dev
+WORKDIR /usr/app/apps/frontend
+
+COPY --from=build /usr/app/apps/frontend/package.json .
+
+RUN pnpm install --prod
 
 RUN addgroup -S nonroot && adduser -S -G nonroot nonroot
 
 USER nonroot
 
-COPY --from=build --chown=nonroot:nonroot /usr/app/.next /usr/app/.next
+COPY --from=build --chown=nonroot:nonroot /usr/app/apps/frontend/.next /usr/app/apps/frontend/.next
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD [ "pnpm", "start" ]
