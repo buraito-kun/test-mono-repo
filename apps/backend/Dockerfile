@@ -1,30 +1,41 @@
-FROM node:24@sha256:222f704ce7f499c7bd7d101c993b980d86393e87bb54d416bcfcfe8e62aa9f64 AS build
-
-WORKDIR /usr/app
-
-COPY package.json .
-
-RUN npm install
-
-COPY . .
-
-RUN npm run build
+FROM node:24-alpine3.20@sha256:3b48d62b0e3a6c31784bafefc95baedf56987c6ee8ba891c924a529e5301fe1c AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN npm install -g pnpm
 
 # -----------------------
 
-FROM node:24-alpine3.20@sha256:3b48d62b0e3a6c31784bafefc95baedf56987c6ee8ba891c924a529e5301fe1c
+FROM base AS build
 
 WORKDIR /usr/app
 
-COPY package.json .
+COPY ../../ ./
 
-RUN npm install --omit=dev
+WORKDIR /usr/app/apps/backend
+
+RUN pnpm install
+
+RUN pnpm run build
+
+# -----------------------
+
+FROM base AS prod
+
+WORKDIR /usr/app
+
+COPY --chown=nonroot:nonroot . .
+
+WORKDIR /usr/app/apps/backend
+
+COPY --from=build /usr/app/apps/backend/package*.json .
+
+RUN pnpm install --prod --frozen-lockfile
 
 RUN addgroup -S nonroot && adduser -S -G nonroot nonroot
 
 USER nonroot
 
-COPY --from=build --chown=nonroot:nonroot /usr/app/dist /usr/app/dist
+COPY --from=build --chown=nonroot:nonroot /usr/app/apps/backend/dist /usr/app/apps/backend/dist
 
 EXPOSE 3001
 
