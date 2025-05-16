@@ -27,9 +27,9 @@ COPY --chown=nonroot:nonroot . .
 
 WORKDIR /usr/app/apps/backend
 
-COPY --from=build /usr/app/apps/backend/package.json .
+COPY --from=build /usr/app/apps/backend/package*.json .
 
-RUN pnpm install --prod
+RUN pnpm install --prod --frozen-lockfile
 
 RUN addgroup -S nonroot && adduser -S -G nonroot nonroot
 
