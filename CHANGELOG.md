@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.2](https://github.com/buraito-kun/test-mono-repo/compare/v3.7.1...v3.7.2) (2025-05-17)
+
+
+### Bug Fixes
+
+* **docker:** forgot to add env SERVICE_NAME for observe ([bc7df37](https://github.com/buraito-kun/test-mono-repo/commit/bc7df37f82e574b7f2b4c4e41492e3cee4be680b))
+
 ## [3.7.1](https://github.com/buraito-kun/test-mono-repo/compare/v3.7.0...v3.7.1) (2025-05-17)
 
 
