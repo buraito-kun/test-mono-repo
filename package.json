@@ -20,5 +20,10 @@
   "engines": {
     "node": ">=18"
   },
-  "version": "3.6.0"
+  "version": "3.6.0",
+  "pnpm": {
+    "overrides": {
+      "cross-spawn": "7.0.6"
+    }
+  }
 }
