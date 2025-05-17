@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.1](https://github.com/buraito-kun/test-mono-repo/compare/v3.7.0...v3.7.1) (2025-05-17)
+
+
+### Bug Fixes
+
+* **lgtm:** change ts config ([7df8ab0](https://github.com/buraito-kun/test-mono-repo/commit/7df8ab0ec4df517be90bf2ca57db88287068f059))
+
 ## [3.7.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.6.0...v3.7.0) (2025-05-17)
 
 
