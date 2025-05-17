@@ -42,4 +42,6 @@ COPY --from=build --chown=nonroot:nonroot /usr/app/apps/frontend/.next /usr/app/
 
 EXPOSE 3000
 
+ENV SERVICE_NAME=frontend
+
 CMD [ "pnpm", "start" ]
