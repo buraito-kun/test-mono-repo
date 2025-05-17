@@ -1,5 +1,25 @@
 # Changelog
 
+## [3.7.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.6.0...v3.7.0) (2025-05-17)
+
+
+### Features
+
+* add instrumentation ([cfde096](https://github.com/buraito-kun/test-mono-repo/commit/cfde096d166663ed3655749790ebe509007bfde4))
+
+
+### Bug Fixes
+
+* avoid vulnerability dependency ([bf29fc2](https://github.com/buraito-kun/test-mono-repo/commit/bf29fc21c969fd2e1665b8170dad784bd97d96e7))
+* **backend:** update file that will not cover ([e21c29d](https://github.com/buraito-kun/test-mono-repo/commit/e21c29d6e968bd8f7cf0f79d883a05e8c4c9bc11))
+* **ci:** change docker build method ([1f1758b](https://github.com/buraito-kun/test-mono-repo/commit/1f1758b7cd6d0ffeec98fbdaffb0b217bdc4b775))
+* **ci:** change docker build method ([15f67ea](https://github.com/buraito-kun/test-mono-repo/commit/15f67ea9825885d01a2cd1080174f4f876ca5bc8))
+* **docker:** fix potential issue ([64966ec](https://github.com/buraito-kun/test-mono-repo/commit/64966ec1fff78d7b2ee834caabb4db57ec4554dc))
+* **docker:** use pnpm instead ([5e531e1](https://github.com/buraito-kun/test-mono-repo/commit/5e531e1fd42bb24b90ca6f278dbf9ff85c4e63e8))
+* **package:** fix logic for url ([c93fb55](https://github.com/buraito-kun/test-mono-repo/commit/c93fb554c34b10b67e54fe95658c04fcbe46238a))
+* **package:** split url and path ([2aa4f5e](https://github.com/buraito-kun/test-mono-repo/commit/2aa4f5e618af5682fd5a916727ace6a97665feca))
+* pnpm lock not up to date ([b087dca](https://github.com/buraito-kun/test-mono-repo/commit/b087dcaa5fd9b026e7b35e439c39a0da00777859))
+
 ## [3.6.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.5.3...v3.6.0) (2025-05-16)
 
 
