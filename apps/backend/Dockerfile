@@ -39,4 +39,6 @@ COPY --from=build --chown=nonroot:nonroot /usr/app/apps/backend/dist /usr/app/ap
 
 EXPOSE 3001
 
+ENV SERVICE_NAME=backend
+
 CMD [ "node", "dist/main.js" ]
