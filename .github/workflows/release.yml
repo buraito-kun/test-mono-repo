@@ -7,7 +7,7 @@ on:
 
 jobs:
   pre-release:
-    uses: ./.github/workflows/test application.yml
+    uses: ./.github/workflows/pre-release.yml
 
   release:
     permissions:
