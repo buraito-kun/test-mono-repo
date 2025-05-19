@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.8.0](https://github.com/buraito-kun/test-mono-repo/compare/v3.7.2...v3.8.0) (2025-05-19)
+
+
+### Features
+
+* add metric for observability ([1263747](https://github.com/buraito-kun/test-mono-repo/commit/1263747a1030be3479214d7122e4f5cb49eb0af9))
+
+
+### Bug Fixes
+
+* **ci:** forgot to change file name ([10cccd8](https://github.com/buraito-kun/test-mono-repo/commit/10cccd8da721f3716454cf2efa04845f794564cc))
+
 ## [3.7.2](https://github.com/buraito-kun/test-mono-repo/compare/v3.7.1...v3.7.2) (2025-05-17)
 
 
