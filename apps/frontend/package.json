@@ -11,11 +11,14 @@
     "test:cov": "jest --coverage"
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
     "@repo/lgtm": "workspace:*",
     "axios": "^1.9.0",
+    "import-in-the-middle": "^1.13.2",
     "next": "15.3.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "require-in-the-middle": "^7.5.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
