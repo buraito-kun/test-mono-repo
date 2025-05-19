@@ -1,4 +1,4 @@
-name: A test application workflows
+name: Pre-release
 
 on:
   workflow_call:
@@ -63,3 +63,38 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           files: ./apps/backend/coverage/lcov.info,./apps/frontend/coverage/lcov.info
+
+  scan-image:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [frontend, backend]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image ${{ matrix.service }}
+        run: |
+          BUILD_ARGS=""
+          if [ "${{ matrix.service }}" == "frontend" ]; then
+            BUILD_ARGS="--build-arg NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}"
+          fi
+
+          docker build -t ghcr.io/${{ github.repository_owner }}/test-mono-repo/${{ matrix.service }}:latest \
+          --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
+          $BUILD_ARGS \
+          -f ./apps/${{ matrix.service }}/Dockerfile .
+
+      - name: Run Trivy scan for ${{ matrix.service }}
+        uses: aquasecurity/trivy-action@0.30.0
+        with:
+          scan-type: image
+          image-ref: ghcr.io/${{ github.repository_owner }}/test-mono-repo/${{ matrix.service }}:latest
+          format: table
+          exit-code: 1
+          severity: CRITICAL,HIGH
