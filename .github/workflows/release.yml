@@ -8,6 +8,10 @@ on:
 jobs:
   pre-release:
     uses: ./.github/workflows/pre-release.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
   release:
     permissions:
