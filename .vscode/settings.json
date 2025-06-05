@@ -3,5 +3,9 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  "sonarlint.connectedMode.project": {
+    "connectionId": "https-sonarqube-production-174f-up-railway-app",
+    "projectKey": "buraito-kun_test-mono-repo_a6d23fe2-0039-4696-8f38-c940d177b53e"
+  }
 }
