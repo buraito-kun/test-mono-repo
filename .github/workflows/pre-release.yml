@@ -2,6 +2,13 @@ name: Pre-release
 
 on:
   workflow_call:
+    secrets:
+      SONAR_TOKEN:
+        required: true
+      SONAR_HOST_URL:
+        required: true
+      NEXT_PUBLIC_API_URL:
+        required: true
 
 jobs:
   test:
