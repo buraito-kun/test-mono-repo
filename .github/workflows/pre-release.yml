@@ -86,7 +86,6 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          SONAR_BRANCH_NAME: ${{ github.ref_name }}
 
       - name: Fail the job when quality gate is red
         uses: SonarSource/sonarqube-quality-gate-action@v1
